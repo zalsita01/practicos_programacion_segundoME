@@ -214,7 +214,9 @@ public class gestor {
 		
 		for (int i = 0; i < L.length; i++) {
 			
-			System.out.println("El libro se publicó el "+ L[i].getFechaLanzamiento() + " por la editorial "+ L[i].getEditorial()+ ", tiene "+ L[i].getNumeroPag()+ " paginas, y fue leido("+ L[i].getLeido()+").");
+			if(L[i] != null){		
+				System.out.println("El libro se publicó el "+ L[i].getFechaLanzamiento() + " por la editorial "+ L[i].getEditorial()+ ", tiene "+ L[i].getNumeroPag()+ " paginas, y fue leido("+ L[i].getLeido()+").");
+			}
 		}
 		
 	}
@@ -222,16 +224,19 @@ public class gestor {
 	public static void ListarRevistas(Revista[] R) {
 		
 		for (int i = 0; i < R.length; i++) {
-			
-			System.out.println("La revista se publicó el "+ R[i].getFechaLanzamiento() + " por la editorial "+ R[i].getEditorial()+ ", es de la marca "+ R[i].getMarca()+ ", y cuesta $"+ R[i].getPrecio()+" pesos.");
+			if (L[i] != null){
+				System.out.println("La revista se publicó el "+ R[i].getFechaLanzamiento() + " por la editorial "+ R[i].getEditorial()+ ", es de la marca "+ R[i].getMarca()+ ", y cuesta $"+ R[i].getPrecio()+" pesos.");				
+			}
 		}
 	}
 	
 	public static void ListarArticulosCientificos(ArticuloCientifico[] AC) {
 		
 		for (int i = 0; i < AC.length; i++) {
-	
-			System.out.println("El articulo científico se publicó el "+ AC[i].getFechaLanzamiento() + " por la editorial "+ AC[i].getEditorial()+ ", habla sobre "+ AC[i].getTema()+ ", paginas, desarrollado por la institución: "+ AC[i].getInstitucion()+".");
+			if (L[i] != null){	
+				System.out.println("El articulo científico se publicó el "+ AC[i].getFechaLanzamiento() + " por la editorial "+ AC[i].getEditorial()+ ", habla sobre "+ AC[i].getTema()+ ", paginas, desarrollado por la institución: "+ AC[i].getInstitucion()+".");
+			}
+			
 		}
 	}
 	
